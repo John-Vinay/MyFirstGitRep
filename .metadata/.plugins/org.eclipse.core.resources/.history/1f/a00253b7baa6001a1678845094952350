@@ -1,0 +1,29 @@
+package com.johnstraining.JavaTopics.JavaTopics;
+
+public class MethodOverRiding {
+	
+	public void methA() {
+		System.out.println("Inside Parent Class Method");
+	}
+		
+}
+
+
+class MethodOverRidden extends MethodOverRiding{
+
+	public void methA() {
+		
+		System.out.println("Inside Child Class Method");
+	}
+	
+	public static void main(String[] args) {
+		
+		MethodOverRidden obj=new MethodOverRidden();
+		
+		obj.methA();
+		obj.methA();
+		
+	}
+	
+}
+

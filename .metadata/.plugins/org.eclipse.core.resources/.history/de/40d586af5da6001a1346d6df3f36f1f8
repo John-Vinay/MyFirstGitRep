@@ -1,0 +1,43 @@
+package com.johnstraining.programsForPractice;
+
+import java.util.Arrays;
+
+public class ReverseAnArray 
+{
+    public static void main( String[] args )
+    {
+        System.out.println( "Hello World!" );
+        
+        int sum = 0;
+        
+        int number=123;
+		while (number>0)
+        {
+        //int number = 123;
+        sum = sum + number%10;
+        number=number/10;
+        }
+		
+		System.out.println(sum);
+        
+        int arr[] = {10,20,30,40};
+        
+        int low = 0; int high = arr.length-1;
+        
+        while (low < high)
+        {
+        		int temp = arr[low];
+        		arr[low] = arr[high];
+        		arr[high] = temp;
+        		low++;
+        		high--;
+        		
+        }
+        
+        System.out.println(Arrays.toString(arr));
+        
+		
+		
+		
+    }
+}

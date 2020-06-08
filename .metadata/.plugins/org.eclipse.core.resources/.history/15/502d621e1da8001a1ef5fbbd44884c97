@@ -1,0 +1,71 @@
+package com.johnstraining.programsForPractice;
+
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+
+public class DuplicateElementStringArray {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		String str[] = {"Java","Java","John","John"};
+		
+		/*for (int i=0;i<str.length;i++) {
+			for (int j=i+1;j<str.length;j++) {
+				if (str[i].equals(str[j])){
+					
+					System.out.println(str[i]);
+				}
+			}
+		Set<String> hs = new HashSet<String>();
+		
+		for (String ele:str) {
+			if (hs.add(ele)==false) {
+				System.out.println("Duplicate is:"+ele);
+				
+			}
+		}*/
+		
+		Map<String,Integer> hm=new HashMap<String,Integer>();
+		for (String ele:str) {
+			Integer count = hm.get(ele);
+			if (hm.containsKey(ele)) {
+				hm.put(ele, hm.get(ele)+1);
+			} else
+			{
+				hm.put(ele, 1);
+			}
+			
+			/*
+			if (count==null) {
+				hm.put(ele, 1);
+			} else {
+				hm.put(ele, hm.get(ele)+1);
+			}*/
+			//System.out.println(hm);
+			Set<Entry<String, Integer>> entryset = hm.entrySet();
+			for (Entry<String,Integer> entry:entryset) {
+				if(entry.getValue()>1) {
+					System.out.println("Duplicate is:"+entry.getKey());
+				}
+			}
+		} 
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+	}
+
+}

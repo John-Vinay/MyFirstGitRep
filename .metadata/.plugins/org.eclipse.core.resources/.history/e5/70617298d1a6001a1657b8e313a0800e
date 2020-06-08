@@ -1,0 +1,30 @@
+package com.johnstraining.JavaTopics.JavaTopics;
+
+public class HelloWorld{
+
+	public void testA() {
+		System.out.println("Inside Parent");
+	}
+	
+	
+	
+}
+    
+
+class HelloIndia extends HelloWorld{
+	public void testA() {
+		
+		System.out.println("Inside Child");
+		
+		
+		
+	}
+	
+	public static void main(String[] args) {
+		
+		HelloIndia obj=new HelloIndia();
+		obj.testA();
+		
+	}
+	
+}

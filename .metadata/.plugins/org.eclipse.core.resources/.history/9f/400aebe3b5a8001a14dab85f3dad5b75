@@ -1,0 +1,53 @@
+package com.johnstraining.programsForPractice;
+
+//Java implementation 
+import java.util.*;
+import java.util.Map.Entry; 
+
+class MaximumRepeatingStringValue { 
+
+	public static void main(String[] args) {
+		
+	
+	String arr[] = { "geeks", "learn", "geeks", "learn", 
+			"portal", "to", "learn", "learn", "learn", 
+			"computer", "learn", "zoom", "learn", 
+			"fire", "in", "be", "data", "geeks" }; 
+	{ 
+
+		// Create HashMap to store word and it's frequency 
+		Map<String, Integer> map = new HashMap<String, Integer>(); 
+
+		// Iterate through array of words 
+		for (int i = 0; i < arr.length; i++) { 
+			// If word already exist in HashMap then increase it's count by 1 
+			if (map.containsKey(arr[i])) { 
+				map.put(arr[i], map.get(arr[i]) + 1); 
+			} 
+			// Otherwise add word to HashMap 
+			else { 
+				map.put(arr[i], 1); 
+			} 
+		} 
+
+		// Create set to iterate over HashMap 
+		//Set<Entry<String, Integer> > set = hs.entrySet(); 
+		String key = ""; 
+		int value = 0; 
+
+		for (Entry<String, Integer> e : map.entrySet()) { 
+			// Check for word having highest frequency 
+			if (e.getValue() > value) { 
+				value = e.getValue(); 
+				key = e.getKey(); 
+			} 
+		} 
+
+		// Return word having highest frequency 
+		//return key; 
+		
+		System.out.println(key);
+	} 
+	}
+
+}	

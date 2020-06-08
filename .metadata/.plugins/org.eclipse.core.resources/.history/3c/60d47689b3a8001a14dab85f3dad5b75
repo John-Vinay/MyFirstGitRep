@@ -1,0 +1,42 @@
+package com.johnstraining.programsForPractice;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+
+public class DupElementsStringArrayUsingMap {
+	 public static void main(String[] args) {
+		
+	
+	 String str[] = {"yogi", "John", "John","John", "John","John", "John","John", "John", "yogi", "yogi", "yogi", "raju", "raju", "John", "yogi","yogi"};
+     //map=new HashMap<Strig,Integer>();
+	 
+	 Map<String, Integer> map = new HashMap<String, Integer>();
+     for (String s : str) {
+         if (map.containsKey(s)) {
+             map.put(s, map.get(s) + 1);
+         } else {
+             map.put(s, 1);;
+         }
+     }
+     
+     Set<Map.Entry<String, Integer> > set = map.entrySet(); 
+     String key = ""; 
+     int value = 0; 
+
+     for (Entry<String, Integer> me : set) { 
+         // Check for word having highest frequency 
+         if (me.getValue() > value) { 
+             value = me.getValue(); 
+             key = me.getKey(); 
+         } 
+     }  
+    	 
+         //System.out.println(e.getKey() + "---" + e.getValue());
+    	 /*if (e.getValue() >= 1) {
+	         System.out.println(e.getKey() + "---" + e.getValue());
+	    	 }*/
+     }
+	 }
+}

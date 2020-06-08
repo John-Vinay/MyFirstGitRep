@@ -1,0 +1,14 @@
+package com.johnstraining.JavaTopics.JavaTopics;
+
+public class MethodOverRiding {
+	
+	public void parentMeth() {
+		System.out.println("Inside Parent Class Method");
+	}
+		public static void main(String[] args) {
+		// TODO Auto-generated method stu
+			}
+
+}
+
+

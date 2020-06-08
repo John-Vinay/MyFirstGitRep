@@ -1,0 +1,43 @@
+package com.johnstraining.programsForPractice;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Map.Entry;
+
+public class DupElementsStringArrayUsingMap {
+	 public static void main(String[] args) {
+		
+	
+	 String str[] = {"yogi", "John", "John", "yogi", "yogi", "yogi", "raju", "raju", "John", "yogi","bogi"};
+     //map=new HashMap<Strig,Integer>();
+	 
+	 Map<String, Integer> map = new HashMap<String, Integer>();
+     for (String s : str) {
+         if (map.containsKey(s)) {
+             map.put(s, map.get(s) + 1);
+         } else {
+             map.put(s, 1);;
+         }
+     }
+     
+     int max_count = 0;
+     String element = null;
+     for (Entry<String, Integer> e : map.entrySet()) {
+         //System.out.println(e.getKey() + "---" + e.getValue());
+    	 if (e.getValue() > 1) {
+    		 if (max_count < e.getValue()) 
+             { 
+                 //res = e.getKey(); 
+                 max_count = e.getValue(); 
+                 element = e.getKey();
+                 
+                
+             }  
+    		      System.out.println(max_count,element);
+	         System.out.println(e.getKey() + "---" + e.getValue());
+	         
+	         
+	    	 }
+     }
+	 }
+}

@@ -1,0 +1,44 @@
+package com.johnstraining.programsForPractice;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Map.Entry;
+
+public class DuplicateCharInString {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		String str = "java";
+		
+		Map<String, Integer> map = new HashMap<String,Integer>();
+		
+		char[] chr = str.toCharArray();
+		
+		//String [] strValues = str.split("");
+		
+		String ch = new String(chr);
+		
+		for  (Character c:ch) {
+			
+			if (map.containsKey(c)) {
+				
+				map.put(c, map.get(c)+1);
+				
+			}else {
+				map.put(c, 1);
+			}
+			
+		}
+		
+		for (Entry<String,Integer> e:map.entrySet()) {
+			System.out.println(e.getKey());
+			
+		}
+		
+		
+		
+
+	}
+
+}

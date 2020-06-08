@@ -1,0 +1,29 @@
+package com.johnstraining.programsForPractice;
+
+import java.util.Scanner;
+
+public class PerfectSqaure {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter Number");
+		Integer num=sc.nextInt();
+		//System.out.println(num);
+		
+		for (int i=1;i<num;i++) {
+			if (i*i == num) {
+				System.out.println("Given number is perfect Square"+i);
+				return;
+			
+			} else {
+				System.out.println("Not a perfect Square");
+				return;
+			}
+			
+		} 
+		
+	} 
+
+}

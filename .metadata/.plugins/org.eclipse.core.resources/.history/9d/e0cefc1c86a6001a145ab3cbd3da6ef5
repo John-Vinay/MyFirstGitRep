@@ -1,0 +1,26 @@
+package com.johnstraining.programsForPractice;
+
+import java.util.Arrays;
+
+public class FirstandLast {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int number = 123;
+		String StrNum = Integer.toString(number);
+		
+		System.out.println(StrNum);
+		
+		String arr[] = StrNum.split("");
+		
+		//System.out.println(Arrays.toString(arr));
+		
+		for (int i = 0;i<arr.length;i++) {
+			System.out.println(arr[i]);
+			
+		}
+
+	}
+
+}

@@ -1,0 +1,36 @@
+package com.johnstraining.programsForPractice;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class DuplicateStringElements {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		String str[] = {"Java","Java","John","John"};
+		
+		/*for (int i=0;i<str.length;i++) {
+			for (int j=i+1;j<str.length;j++) {
+				if (str[i].equals(str[j])){
+					
+					System.out.println(str[i]);
+				}
+			}
+			
+		}*/
+		
+		Set<String> hs = new HashSet<String>();
+		
+		for (String names:str) {
+			if(hs.add(names)==false){
+				System.out.println("Duplicate element is:"+names);
+			}
+		}
+		
+		
+		
+
+	}
+
+}

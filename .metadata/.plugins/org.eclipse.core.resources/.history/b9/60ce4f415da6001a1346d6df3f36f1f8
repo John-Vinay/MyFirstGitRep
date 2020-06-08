@@ -1,0 +1,23 @@
+package com.johnstraining.programsForPractice;
+
+public class ReverseAnArray 
+{
+    public static void main( String[] args )
+    {
+        System.out.println( "Hello World!" );
+        
+        int sum = 0;
+        
+        int number=123;
+		while (number>0)
+        {
+        //int number = 123;
+        sum = sum + number%10;
+        number=number/10;
+        }
+		
+		System.out.println(sum);
+        
+        
+    }
+}
